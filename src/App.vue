@@ -4,7 +4,7 @@
   >
     <GridWrapper>
       <div
-        className="col-span-12 w-full flex flex-col justify-center items-center  "
+        className="col-span-12 w-full flex flex-col justify-center items-center grid-item  "
       >
         <header
           class="bg-stone-900 text-white w-full flex justify-between items-center p-4 rounded-xl"
@@ -15,14 +15,9 @@
       </div>
 
       <div
-        className="md:col-span-3 md:row-span-1 col-span-12 row-span-1 border border-solid "
+        className="md:col-span-3 md:row-span-1 col-span-12 row-span-1 border border-solid grid-item "
       >
-        <div
-          v-motion
-          :animate="animationState"
-          :transition="{ duration: 1, delay: 0.5 }"
-          class="rounded-md w-full h-full overflow-hidden"
-        >
+        <div class="rounded-md w-full h-full overflow-hidden">
           <img
             src="https://i.pinimg.com/736x/80/3c/0b/803c0bca14a3d72022ffac4d4a4aa0b8.jpg"
             class="rounded-md w-full h-full object-cover"
@@ -30,7 +25,9 @@
         </div>
       </div>
 
-      <div className="md:col-span-6 md:row-span-1 col-span-6 row-span-1 ">
+      <div
+        className="md:col-span-6 md:row-span-1 col-span-6 row-span-1 grid-item "
+      >
         <div class="w-full h-full flex flex-col rounded-md gap-2">
           <div
             class="flex justify-around px-4 bg-stone-950 text-white py-4 items-center rounded-md"
@@ -44,14 +41,22 @@
             <div
               class="h-full flex flex-col justify-evenly md:py-2 md:px-6 md:text-center py-1 px-2 items-center font-oswald"
             >
-              <h1 class="md:text-4xl text-xl mb-1 font-bold">HEY! I'M GALIH</h1>
-              <p class="md:text-xl text-sm font-normal text-center mb-1">
+              <h1
+                class="md:text-4xl text-xl mb-1 font-bold bg-gradient-to-b from-stone-100 to-stone-500 text-transparent bg-clip-text"
+              >
+                HEY! I'M GALIH
+              </h1>
+              <p
+                class="md:text-xl text-sm font-normal text-center mb-1 bg-gradient-to-b from-stone-100 to-stone-500 text-transparent bg-clip-text"
+              >
                 I'm an online driver currently learning to become a Fullstack
                 Developer. I've joined several training programs and am actively
                 improving my skills to start a career in this field.
               </p>
 
-              <p class="md:text-xl text-sm text-center italic font-light">
+              <p
+                class="md:text-xl text-sm text-center italic font-light bg-gradient-to-b from-stone-100 to-stone-500 text-transparent bg-clip-text"
+              >
                 - Fortis Fortuna Adiuvat
               </p>
             </div>
@@ -60,7 +65,7 @@
       </div>
 
       <div
-        className="md:col-span-3 md:row-span-2 col-span-6 row-span-1 rounded-md border  "
+        className="md:col-span-3 md:row-span-2 col-span-6 row-span-1 rounded-md border grid-item "
       >
         <div class="relative w-full h-full">
           <img
@@ -71,7 +76,7 @@
       </div>
 
       <div
-        className="md:col-span-7  md:row-span-2 col-span-12 row-span-1 border rounded-md relative  "
+        className="md:col-span-7  md:row-span-2 col-span-12 row-span-1 border rounded-md relative grid-item  "
       >
         <section class="h-full w-full font-oswald">
           <Swiper
@@ -89,22 +94,32 @@
               >
                 <p class="text-lg font-semibold mb-4">{{ data.title }}</p>
                 <div class="flex flex-wrap gap-2 mb-2">
-                  <p
+                  <button
                     v-for="(tech, index) in data.tech"
                     :key="index"
-                    class="bg-gray-200 text-gray-800 px-3 py-1 rounded-lg border-b-4 border-gray-400"
+                    class="btn-custom-css"
                   >
                     {{ tech }}
-                  </p>
+                  </button>
                 </div>
-                <a
-                  :href="data.github"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="btn-custom-css"
-                >
-                  View on GitHub
-                </a>
+                <div class="flex gap-2">
+                  <a
+                    :href="data.urlGithub"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn-custom-css"
+                  >
+                    View on GitHub
+                  </a>
+                  <a
+                    :href="data.urlLink"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn-custom-css"
+                  >
+                    View on Site
+                  </a>
+                </div>
               </div>
             </SwiperSlide>
           </Swiper>
@@ -112,7 +127,7 @@
       </div>
 
       <div
-        className="md:col-span-2 md:row-span-1 col-span-12 row-span-1 border rounded-md "
+        className="md:col-span-2 md:row-span-1 col-span-12 row-span-1 border rounded-md grid-item"
       >
         <div class="relative">
           <img
@@ -128,7 +143,7 @@
       </div>
 
       <div
-        className="md:col-span-5  md:row-span-1 col-span-12  border rounded-md"
+        className="md:col-span-5  md:row-span-1 col-span-12  border rounded-md grid-item"
       >
         <section
           class="w-full flex flex-col gap-2 py-4 h-full bg-stone-950 text-white text-center rounded-md font-oswald"
@@ -138,7 +153,7 @@
             <button
               v-for="(skill, index) in skills"
               :key="index"
-              class="bg-stone-300 text-stone-800 px-4 py-2 rounded-lg hover:bg-stone-600 hover:text-stone-100"
+              class="btn-custom-css"
             >
               {{ skill }}
             </button>
@@ -187,21 +202,24 @@ const dataPhoto = [
     id: 1,
     title: "Laravel API Review-Film",
     image: beReview,
-    url: "https://github.com/MchmdGalih/Be-ReviewFilm",
+    urlGithub: "https://github.com/MchmdGalih/Be-ReviewFilm",
+    urlLink: "https://documenter.getpostman.com/view/25463593/2sAYHzHivT",
     tech: ["Laravel", "PHP"],
   },
   {
     id: 2,
     title: "React App NoteList",
     image: noteList,
-    url: "https://github.com/MchmdGalih/notes-v2",
+    urlGithub: "https://github.com/MchmdGalih/notes-v2",
+    urlLink: "https://notes-v2-seven.vercel.app/",
     tech: ["React", "JavaScript"],
   },
   {
     id: 3,
     title: "Remix BookShelf",
     image: bookShelf,
-    url: "https://github.com/MchmdGalih/Books-Remix",
+    urlGithub: "https://github.com/MchmdGalih/Books-Remix",
+    urlLink: "#",
     tech: ["Remix", "NestJs", "Typescript"],
   },
 ];
@@ -238,12 +256,12 @@ const skills = [
 }
 
 .btn-custom-css {
-  padding: 15px 15px;
+  padding: 10px 15px;
   border: unset;
-  border-radius: 15px;
+  border-radius: 5px;
   color: #212121;
   z-index: 1;
-  background: #e8e8e8;
+  background: #ffffff;
   position: relative;
   font-weight: 500;
   font-size: 16px;
@@ -260,12 +278,11 @@ const skills = [
   left: 0;
   height: 100%;
   width: 0;
-  border-radius: 15px;
   background-color: #212121;
   z-index: -1;
   -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
   box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
-  transition: all 250ms;
+  transition: all 350ms;
 }
 
 .btn-custom-css:hover {
@@ -278,7 +295,7 @@ const skills = [
 
 @media (max-width: 480px) {
   .btn-custom-css {
-    padding: 5px 15px;
+    padding: 10px 15px;
     font-size: 12px;
   }
 }
