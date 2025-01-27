@@ -2,7 +2,12 @@
 export default {
   content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        cedarville: ['"Cedarville Cursive"', "cursive"],
+        oswald: ['"Oswald"', "sans-serif"],
+      },
+    },
   },
   plugins: [],
 };
