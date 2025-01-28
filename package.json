@@ -12,8 +12,7 @@
     "gsap": "^3.12.7",
     "oh-vue-icons": "^1.0.0-rc3",
     "swiper": "^11.2.1",
-    "vue": "^3.5.13",
-    "vue-router": "^4.5.0"
+    "vue": "^3.5.13"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.2.1",
