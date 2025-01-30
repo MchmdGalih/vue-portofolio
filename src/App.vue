@@ -44,11 +44,36 @@
       >
         <Skill />
       </GridBox>
+
+      <GridBox customClass="md:col-span-8  md:row-span-1 col-span-12 grid-item">
+        <section class="w-full">
+          <swiper
+            :modules="[EffectCoverflow]"
+            effect="coverflow"
+            :space-between="10"
+            :grabCursor="true"
+          >
+            <swiper-slide v-for="data in experience" :key="data.id"
+              ><Experience :dataProps="data"
+            /></swiper-slide>
+          </swiper>
+        </section>
+      </GridBox>
+
+      <GridBox
+        customClass="md:col-span-4 bg-stone-950 md:row-span-1 col-span-12 grid-item"
+      >
+        <p>TEST</p>
+      </GridBox>
     </GridWrapper>
   </main>
 </template>
 
 <script setup>
+import { Swiper, SwiperSlide } from "swiper/vue";
+import { Mousewheel, EffectCoverflow } from "swiper/modules";
+import "swiper/css";
+import "swiper/swiper-bundle.css";
 import GridWrapper from "@/components/Gird/GridWrapper.vue";
 import GridBox from "@/components/Gird/GridBox.vue";
 import Header from "@/components/Header.vue";
@@ -58,55 +83,23 @@ import About from "@/components/About.vue";
 import Projects from "@/components/Projects.vue";
 import Hire from "@/components/Hire.vue";
 import Skill from "@/components/Skill.vue";
-
+import Experience from "./components/Experience.vue";
+import { dataExperience } from "./utils/data";
 import { onMounted, ref } from "vue";
-import { gsap } from "gsap";
+
+const experience = ref(dataExperience);
+const isLoading = ref(true);
 
 onMounted(() => {
-  const gridItems = document.querySelectorAll(".grid-item");
-  const isMobile = window.innerWidth <= 768;
-
-  gsap.set(gridItems, { opacity: 0, x: 0, y: 0 });
-
-  gsap.set(gridItems[1], {
-    opacity: 1,
-    xPercent: isMobile ? 0 : 150,
-    yPercent: isMobile ? 70 : 50,
-  });
-
-  if (isMobile) {
-    gsap.to(gridItems[1], {
-      opacity: 1,
-      y: 0,
-      x: 0,
-      duration: 1,
-      delay: 0.5,
-
-      onComplete: () => {
-        gsap.to(gridItems, {
-          opacity: 1,
-          xPercent: 0,
-          yPercent: 0,
-          duration: 0.5,
-        });
-      },
-    });
-  } else {
-    gsap.to(gridItems[1], {
-      opacity: 1,
-      xPercent: 0,
-      yPercent: 50,
-      duration: 1,
-      delay: 0.5,
-      onComplete: () => {
-        gsap.to(gridItems, {
-          opacity: 1,
-          xPercent: 0,
-          yPercent: 0,
-          duration: 1,
-        });
-      },
-    });
-  }
+  setTimeout(() => {
+    isLoading.value = false;
+  }, 4000);
 });
 </script>
+
+<style scoped>
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+</style>

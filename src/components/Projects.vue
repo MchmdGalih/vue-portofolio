@@ -1,14 +1,12 @@
 <template>
   <section class="h-full w-full font-oswald">
-    <Swiper
-      :modules="[Pagination, Autoplay]"
+    <swiper
+      :modules="[Pagination, EffectFade]"
       effect="fade"
-      :autoplay="{ delay: 2000, disableOnInteraction: false }"
       :grabCursor="true"
-      :loop="true"
       :pagination="{ clickable: true }"
     >
-      <SwiperSlide v-for="data in dataPhoto" :key="data.id">
+      <swiper-slide v-for="data in projects" :key="data.id">
         <img :src="data.image" :alt="data.title" class="rounded-sm" />
         <div
           class="absolute inset-0 bg-black/50 flex flex-col justify-center items-center text-white p-4"
@@ -42,46 +40,20 @@
             </a>
           </div>
         </div>
-      </SwiperSlide>
-    </Swiper>
+      </swiper-slide>
+    </swiper>
   </section>
 </template>
 
 <script setup>
+import { ref } from "vue";
+import { dataPhoto } from "@/utils/data";
 import { Swiper, SwiperSlide } from "swiper/vue";
-import { Pagination, Autoplay } from "swiper/modules";
+import { Pagination, EffectFade } from "swiper/modules";
 import "swiper/css";
 import "swiper/swiper-bundle.css";
-import beReview from "@/assets/be-review-film.jpg";
-import noteList from "@/assets/personal-notes.jpg";
-import bookShelf from "@/assets/book-shelf.jpg";
 
-const dataPhoto = [
-  {
-    id: 1,
-    title: "Laravel API Review-Film",
-    image: beReview,
-    urlGithub: "https://github.com/MchmdGalih/Be-ReviewFilm",
-    urlLink: "https://documenter.getpostman.com/view/25463593/2sAYHzHivT",
-    tech: ["Laravel", "PHP"],
-  },
-  {
-    id: 2,
-    title: "React App NoteList",
-    image: noteList,
-    urlGithub: "https://github.com/MchmdGalih/notes-v2",
-    urlLink: "https://notes-v2-seven.vercel.app/",
-    tech: ["React", "JavaScript"],
-  },
-  {
-    id: 3,
-    title: "Remix BookShelf",
-    image: bookShelf,
-    urlGithub: "https://github.com/MchmdGalih/Books-Remix",
-    urlLink: "#",
-    tech: ["Remix", "NestJs", "Typescript"],
-  },
-];
+const projects = ref(dataPhoto);
 </script>
 
 <style scoped>

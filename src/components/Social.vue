@@ -36,26 +36,8 @@
 </template>
 
 <script setup>
-const icons = [
-  {
-    id: 1,
-    icon: "fa-github",
-    url: "https://github.com/MchmdGalih",
-  },
-  {
-    id: 2,
-    icon: "fa-linkedin",
-    url: "https://www.linkedin.com/in/mochamad-galih-sulistio-pratama",
-  },
-  {
-    id: 3,
-    icon: "fa-instagram",
-    url: "https://www.instagram.com/__mochgalih/",
-  },
-  {
-    id: 4,
-    icon: "fa-facebook",
-    url: "#",
-  },
-];
+import { dataIcons } from "@/utils/data";
+import { ref } from "vue";
+
+const icons = ref(dataIcons);
 </script>

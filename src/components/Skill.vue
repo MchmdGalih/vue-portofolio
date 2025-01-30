@@ -16,15 +16,8 @@
 </template>
 
 <script setup>
-const skills = [
-  "JavaScript",
-  "PHP",
-  "React",
-  "Vue",
-  "Node.js",
-  "Tailwind CSS",
-  "Bootstrap",
-  "Laravel",
-  "Express.js",
-];
+import { dataSkills } from "../utils/data";
+import { ref } from "vue";
+
+const skills = ref(dataSkills);
 </script>
