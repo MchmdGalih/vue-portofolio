@@ -1,17 +1,12 @@
 <template>
-  <v-motion :class="customClass">
+  <div :class="customClass">
     <slot></slot>
-  </v-motion>
+  </div>
 </template>
 
 <script setup>
 defineProps({
   customClass: {
-    type: String,
-    default: "",
-  },
-
-  animation: {
     type: String,
     default: "",
   },

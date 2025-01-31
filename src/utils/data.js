@@ -9,7 +9,7 @@ const dataExperience = [
     date: "Dec 2024 - Jan 2025",
     company: "Rumah Amal Salman X Sanbercode",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, sapientecum. Odit in numquam porro harum omnis nostrum, quas eius ab, quasiprovident impedit, quibusdam accusamus eos exercitationem saepe. Nemo sit unde, eos autem at ipsum rem, a optio exercitationem inventore nesciunt natus totam accusantium. Perspiciatis minima asperiores tempora sapiente?",
+      "Developing a simple e-commerce web app where users can seamlessly browse and purchase products. Focusing on an intuitive UI, smooth transactions, and a great shopping experience.",
     tech: ["PHP", "Laravel", "SQL", "Tailwind", "Vue Js", "Javascript"],
   },
 
@@ -19,7 +19,7 @@ const dataExperience = [
     date: "Jun 2023 - Jul 2023",
     company: "Alkademi",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, sapientecum. Odit in numquam porro harum omnis nostrum, quas eius ab, quasiprovident impedit, quibusdam accusamus eos exercitationem saepe.",
+      "Building a news portal website to deliver the latest updates and information to users in an intuitive and engaging way. Stay informed anytime, anywhere.",
     tech: [
       "Boostrap",
       "NuxtJs",
@@ -36,17 +36,17 @@ const dataExperience = [
     date: "Jun 2019 - May 2022",
     company: "PT. Gajah Angkasa Perkasa",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, sapientecum. Odit in numquam porro harum omnis nostrum, quas eius ab, quasiprovident impedit, quibusdam accusamus eos exercitationem saepe.",
+      "As a color technician, I am responsible for selecting the appropriate materials, preparing precise color formulas, and testing the colors to ensure they meet specifications. ",
     tech: ["Ink Mixing System"],
   },
 
   {
     id: 3,
     title: "Metal Production Operator",
-    date: "Jan 2017 - Mar 2017",
+    date: "Jan 2017 - Mar 2017 (Practical Training)",
     company: "CV. Kharisma Teknik ",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, sapientecum. Odit in numquam porro harum omnis nostrum, quas eius ab, quasiprovident impedit, quibusdam accusamus eos exercitationem saepe.",
+      "In my role, I operate production machines and equipment according to standard operating procedures, ensuring smooth and efficient workflows. ",
     tech: ["Cutting Machine", "Forming Machine", "Welding Machine"],
   },
 ];

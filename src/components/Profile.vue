@@ -1,7 +1,7 @@
 <template>
-  <div class="rounded-md w-full h-full overflow-hidden text-white">
+  <div class="rounded-md w-full h-full overflow-hidden">
     <img
-      src="https://i.pinimg.com/736x/80/3c/0b/803c0bca14a3d72022ffac4d4a4aa0b8.jpg"
+      src="https://i.pinimg.com/236x/da/4a/e9/da4ae96d1d68f10254b19f59a972af62.jpg"
       class="rounded-md w-full h-full object-cover"
     />
   </div>

@@ -1,14 +1,14 @@
 <template>
   <section class="w-full h-full flex flex-col rounded-md gap-2">
     <div
-      class="flex justify-around px-4 bg-stone-950 text-white py-4 items-center rounded-md"
+      class="flex justify-around px-4 bg-[#03346E] text-white py-4 items-center rounded-md"
     >
       <a :href="icon.url" v-for="icon in icons" :key="icon.id">
         <v-icon :name="icon.icon" scale="1.5" />
       </a>
     </div>
 
-    <div class="bg-stone-950 text-white flex-grow rounded-md">
+    <div class="bg-[#03346E] text-white flex-grow rounded-md">
       <div
         class="h-full flex flex-col justify-evenly md:py-2 md:px-6 md:text-center py-1 px-2 items-center font-oswald"
       >
