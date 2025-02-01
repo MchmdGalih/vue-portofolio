@@ -28,7 +28,7 @@
       </GridBox>
 
       <GridBox
-        class="md:col-span-7 md:row-span-2 col-span-12 row-span-1 rounded-md relative grid-item"
+        class="md:col-span-7 md:row-span-2 col-span-12 row-span-2 rounded-md relative grid-item"
       >
         <Projects />
       </GridBox>
@@ -46,7 +46,7 @@
       </GridBox>
 
       <GridBox
-        customClass="md:col-span-8  md:row-span-1 col-span-12 grid-item "
+        customClass="md:col-span-6  md:row-span-1 col-span-12 grid-item "
       >
         <section class="w-full h-full">
           <swiper
@@ -54,6 +54,7 @@
             effect="coverflow"
             :space-between="10"
             :grabCursor="true"
+            :loop="true"
           >
             <swiper-slide v-for="data in experience" :key="data.id"
               ><Experience :dataProps="data"
@@ -63,12 +64,15 @@
       </GridBox>
 
       <GridBox
-        customClass="md:col-span-4 bg-[#03346E] md:row-span-1 col-span-12 grid-item"
+        customClass="md:col-span-6 bg-[#03346E] md:row-span-1 col-span-12 grid-item"
       >
         <div
-          class="w-full h-full font-bold text-white flex justify-center items-center"
+          class="w-full font-bold text-white h-full flex justify-center items-center"
         >
-          <p>COMMING SOON.</p>
+          <div class="flex flex-col">
+            <p>COMING SOON...</p>
+            <p>MASING BINGUNG😭</p>
+          </div>
         </div>
       </GridBox>
     </GridWrapper>

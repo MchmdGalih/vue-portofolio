@@ -1,8 +1,10 @@
 <template>
   <section class="h-full w-full font-oswald">
     <swiper
-      :modules="[Pagination, EffectFade]"
+      :modules="[Pagination, EffectFade, Autoplay]"
       effect="fade"
+      :loop="true"
+      :autoplay="{ delay: 2000, disableOnInteraction: false }"
       :grabCursor="true"
       :pagination="{ clickable: true }"
     >
@@ -49,7 +51,7 @@
 import { ref } from "vue";
 import { dataPhoto } from "@/utils/data";
 import { Swiper, SwiperSlide } from "swiper/vue";
-import { Pagination, EffectFade } from "swiper/modules";
+import { Pagination, EffectFade, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/swiper-bundle.css";
 

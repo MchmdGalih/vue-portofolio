@@ -2,9 +2,13 @@
   <div
     class="w-full h-full flex flex-col py-4 px-4 rounded-md font-oswald bg-[#03346E] text-white"
   >
-    <div class="flex gap-2 items-center mb-2">
-      <span class="w-8 h-[2px] bg-white"></span>
-      <h1 class="text-xl md:text-xl font-bold">Experience</h1>
+    <div class="flex gap-2 justify-between items-center mb-2">
+      <div class="flex gap-2 items-center">
+        <span class="w-8 h-[2px] bg-white"></span>
+        <h1 class="text-xl md:text-xl font-bold">Experience</h1>
+      </div>
+
+      <v-icon name="fa-hand-rock" scale="1.5" />
     </div>
     <div>
       <h2>{{ dataProps.company }} | {{ dataProps.date }}</h2>
