@@ -69,9 +69,8 @@
         <div
           class="w-full font-bold text-white h-full flex justify-center items-center"
         >
-          <div class="flex flex-col">
+          <div class="flex flex-col text-center">
             <p>COMING SOON...</p>
-            <p>MASING BINGUNG😭</p>
           </div>
         </div>
       </GridBox>
