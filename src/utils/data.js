@@ -64,8 +64,8 @@ const dataPhoto = [
     id: 2,
     title: "React App NoteList",
     image: noteList,
-    urlGithub: "https://github.com/MchmdGalih/notes-v2",
-    urlLink: "https://notes-v2-seven.vercel.app/",
+    urlGithub: "https://github.com/MchmdGalih/react-notes-dicoding",
+    urlLink: "https://personal-notes-tan.vercel.app/",
     tech: ["React", "JavaScript"],
   },
   {
