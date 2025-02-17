@@ -66,13 +66,7 @@
       <GridBox
         customClass="md:col-span-6 bg-[#03346E] md:row-span-1 col-span-12 grid-item"
       >
-        <div
-          class="w-full font-bold text-white h-full flex justify-center items-center"
-        >
-          <div class="flex flex-col text-center">
-            <p>COMING SOON...</p>
-          </div>
-        </div>
+        <div class="w-full font-bold text-white h-full grid grid-cols-2"></div>
       </GridBox>
     </GridWrapper>
   </main>
