@@ -1,6 +1,7 @@
 import beReview from "@/assets/be-review-film.jpg";
 import noteList from "@/assets/personal-notes.jpg";
 import bookShelf from "@/assets/book-shelf.jpg";
+import ecommerce from "@/assets/e-commerce.jpg";
 
 const dataExperience = [
   {
@@ -75,6 +76,14 @@ const dataPhoto = [
     urlGithub: "https://github.com/MchmdGalih/Books-Remix",
     urlLink: "#",
     tech: ["Remix", "NestJs", "Typescript"],
+  },
+  {
+    id: 4,
+    title: "E-Commerce Basic",
+    image: ecommerce,
+    urlGithub: "https://github.com/MchmdGalih/FE-Kelompok5",
+    urlLink: "https://fe-kelompok5.vercel.app/",
+    tech: ["Vue Js", "Laravel"],
   },
 ];
 
