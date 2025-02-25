@@ -117,7 +117,7 @@ const dataIcons = [
   },
   {
     id: 4,
-    icon: "fa-facebook",
+    icon: "fa-discord",
     url: "#",
   },
 ];
