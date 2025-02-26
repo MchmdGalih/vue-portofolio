@@ -118,7 +118,7 @@ const dataIcons = [
   {
     id: 4,
     icon: "fa-discord",
-    url: "#",
+    url: "https://discordapp.com/users/528492014363213844",
   },
 ];
 
