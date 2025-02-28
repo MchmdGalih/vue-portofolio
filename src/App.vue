@@ -64,9 +64,22 @@
       </GridBox>
 
       <GridBox
-        customClass="md:col-span-6 bg-[#03346E] md:row-span-1 col-span-12 grid-item"
+        customClass="md:col-span-6 bg-[#03346E] md:row-span-1 col-span-12  relative py-5 grid-card"
       >
-        <div class="w-full font-bold text-white h-full grid grid-cols-2"></div>
+        <div class="flex px-4 text-white gap-2 items-center">
+          <span class="w-8 h-[2px] bg-white"></span>
+          <h1 class="text-xl md:text-xl font-bold">Certificates</h1>
+        </div>
+        <div class="card-group">
+          <div class="big-card card"></div>
+          <div class="big-card card"></div>
+          <div class="big-card card"></div>
+          <div class="big-card card text-center items-center">
+            <span class="h-full font-bold flex justify-center items-center">
+              Coming Soon..
+            </span>
+          </div>
+        </div>
       </GridBox>
     </GridWrapper>
   </main>
@@ -117,5 +130,37 @@ onMounted(() => {
 .swiper {
   width: 100%;
   height: 100%;
+}
+
+.grid-card {
+  min-height: 300px;
+}
+.card-group {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+
+.big-card {
+  width: 200px;
+  height: 200px;
+  background: #ffffff;
+  position: absolute;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transform: translateX(-10%) rotate(-1deg);
+  cursor: pointer;
+}
+
+.big-card:nth-child(2) {
+  transform: translateX(-6%) rotate(-3deg);
+}
+.big-card:nth-child(3) {
+  transform: rotate(2deg);
+}
+.big-card:nth-child(4) {
+  transform: translateX(10%) rotate(5deg);
 }
 </style>
