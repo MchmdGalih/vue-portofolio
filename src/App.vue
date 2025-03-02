@@ -64,7 +64,7 @@
       </GridBox>
 
       <GridBox
-        customClass="md:col-span-6 bg-[#03346E] md:row-span-1 col-span-12  relative py-5 grid-card"
+        customClass="md:col-span-6 bg-[#03346E] md:row-span-1 col-span-12  relative py-5 grid-card grid-item"
       >
         <div class="flex px-4 text-white gap-2 items-center">
           <span class="w-8 h-[2px] bg-white"></span>
