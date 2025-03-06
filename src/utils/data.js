@@ -2,6 +2,7 @@ import beReview from "@/assets/be-review-film.jpg";
 import noteList from "@/assets/personal-notes.jpg";
 import bookShelf from "@/assets/book-shelf.jpg";
 import ecommerce from "@/assets/e-commerce.jpg";
+import libblion from "@/assets/libblion.jpg";
 
 const dataExperience = [
   {
@@ -83,7 +84,15 @@ const dataPhoto = [
     image: ecommerce,
     urlGithub: "https://github.com/MchmdGalih/FE-Kelompok5",
     urlLink: "https://fe-kelompok5.vercel.app/",
-    tech: ["Vue Js", "Laravel"],
+    tech: ["Vue Js", "Laravel", "Tailwind"],
+  },
+  {
+    id: 4,
+    title: "Libblion",
+    image: libblion,
+    urlGithub: "https://github.com/MchmdGalih/FE-Kelompok5",
+    urlLink: "https://libblion-fe.vercel.app/",
+    tech: ["Vue Js", "Laravel", "Tailwind"],
   },
 ];
 
