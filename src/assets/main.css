@@ -1,49 +1,27 @@
-@import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Oswald:wght@200..700&display=swap");
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+@import "tailwindcss";
 
-.btn-custom-css {
-  padding: 10px 15px;
-  border: unset;
-  border-radius: 5px;
-  color: #212121;
-  z-index: 1;
-  background: #ffffff;
+@theme {
+  --font-primary: "Montserrat", sans-serif;
+  --font-secondary: "Roboto Mono", monospace;
+  --color-font-green: #64ffcf;
+  --color-dark-blue: #0a192f;
+}
+
+.underline-custom {
   position: relative;
-  font-weight: 500;
-  font-size: 16px;
-  -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
-  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
-  transition: all 250ms;
-  overflow: hidden;
-}
-
-.btn-custom-css::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 0;
-  background-color: #021526;
-  z-index: -1;
-  -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
-  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
-  transition: all 350ms;
-}
-
-.btn-custom-css:hover {
-  color: #e8e8e8;
-}
-
-.btn-custom-css:hover::before {
-  width: 100%;
-}
-
-@media (max-width: 480px) {
-  .btn-custom-css {
-    padding: 10px 15px;
-    font-size: 12px;
+  &&::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    height: 2px;
+    width: 0%;
+    background: #64ffcf;
+    transition: width 0.3s ease-in-out;
   }
 }
+
+/* .group:hover .underline-hover::after {
+  width: 100%;
+} */
