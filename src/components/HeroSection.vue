@@ -1,6 +1,6 @@
 <template>
   <section
-    class="w-full min-h-full lg:py-18 md:py-14 py-8 flex flex-col justify-center"
+    class="w-full min-h-screen max-w-[1000px] flex flex-col justify-center lg:py-0 md:py-12 py-22 items-start"
   >
     <div class="flex flex-col gap-y-8">
       <p class="text-font-green text-secondary text-xl tracking-wide font-bold">

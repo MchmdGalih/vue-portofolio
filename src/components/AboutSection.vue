@@ -1,7 +1,7 @@
 <template>
   <section
     id="about"
-    class="w-full lg:px-12 py-12 md:px-10 flex flex-col gap-y-6"
+    class="max-w-[900px] mx-auto flex flex-col items-center gap-y-6"
   >
     <div class="w-full inline-flex space-x-2 items-center font-secondary">
       <span class="text-font-green md:text-2xl text-xl">01.</span>

@@ -1,5 +1,5 @@
 <template>
-  <header class="w-full sticky top-0 py-8 lg:px-14 md:12 px-6">
+  <header class="w-full fixed z-10 top-0 py-8 lg:px-14 md:12 px-6">
     <nav class="flex justify-between items-center font-secondary">
       <div>
         <h1 class="text-font-green">G.</h1>
