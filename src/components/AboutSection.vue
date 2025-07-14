@@ -1,7 +1,10 @@
 <template>
-  <section id="about" class="w-full lg:px-12 md:px-10 flex flex-col gap-y-6">
+  <section
+    id="about"
+    class="w-full lg:px-12 py-12 md:px-10 flex flex-col gap-y-6"
+  >
     <div class="w-full inline-flex space-x-2 items-center font-secondary">
-      <span class="text-font-green md:text-2xl text">01.</span>
+      <span class="text-font-green md:text-2xl text-xl">01.</span>
       <h1 class="text-slate-100 md:text-2xl text-xl font-medium">About Me.</h1>
       <div class="md:w-[200px] w-[150px] border border-slate-300"></div>
     </div>
@@ -11,8 +14,8 @@
       <div class="space-y-2.5 tracking-wide font-primary text-slate-300">
         <p>
           Hello! My name is Galih, and I enjoy building things for the web. I
-          used to work as a motorcycle taxi driver and as a paint kitchen
-          operator at a manufacturing company in Bandung.
+          currently work as a motorcycle taxi driver and previously worked at a
+          textile company in Bandung for three years.
         </p>
         <p>
           In 2023, I became interested in web development and started learning
