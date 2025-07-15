@@ -6,7 +6,7 @@
         Where I've Experience.
       </h1>
       <div
-        class="lg:w-[200px] md:w-[120px] w-[50px] border border-slate-300"
+        class="lg:w-[200px] md:w-[120px] hidden sm:block border border-slate-300"
       ></div>
     </div>
     <div class="max-w-[700px]"></div>

@@ -1,5 +1,6 @@
 <template>
   <div class="min-h-screen flex flex-col">
+    <SplashLoader />
     <Navbar @toggle="handleToggle" :is-open="isOpen" />
 
     <SocialSidebar :icons="social" />
@@ -25,6 +26,7 @@ import HeroSection from "./components/HeroSection.vue";
 import Navbar from "./components/Navbar.vue";
 import SocialSidebar from "./components/SocialSidebar.vue";
 import Experience from "./components/Experience.vue";
+import SplashLoader from "./components/SplashLoader.vue";
 
 const social = [
   {

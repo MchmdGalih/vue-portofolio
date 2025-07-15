@@ -1,8 +1,10 @@
 <template>
-  <header class="w-full fixed z-10 top-0 py-8 lg:px-14 md:12 px-6">
+  <header
+    class="w-full fixed z-10 backdrop-blur-sm top-0 py-8 lg:px-14 md:12 px-6"
+  >
     <nav class="flex justify-between items-center font-secondary">
-      <div>
-        <h1 class="text-font-green">G.</h1>
+      <div class="w-10 h-10 text-font-green">
+        <Logo />
       </div>
 
       <ul class="hidden md:inline-flex items-center space-x-4 text-sm">
@@ -25,6 +27,7 @@
 
 <script setup>
 import ButtonBurger from "./Button/Burger.vue";
+import Logo from "./Logo.vue";
 
 const menu = [
   { id: 1, num: "01.", name: "About", href: "#about" },

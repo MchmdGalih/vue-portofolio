@@ -1,6 +1,8 @@
 <template>
-  <section class="h-screen min-h-screen">
-    <div class="flex flex-col items-start section-hero">
+  <section class="h-screen">
+    <div
+      class="flex flex-col h-auto lg:py-10 pt-12 lg:items-start md:justify-center"
+    >
       <h1 class="text-font-green text-secondary text-md mb-2 font-normal">
         Hi, my name is
       </h1>
@@ -38,11 +40,3 @@
     </div>
   </section>
 </template>
-<style scoped>
-@media (max-height: 700px) and (min-width: 700px), (max-width: 360px) {
-  .section-hero {
-    height: auto;
-    padding-top: 120px;
-  }
-}
-</style>
