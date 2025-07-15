@@ -1,9 +1,9 @@
 <template>
   <div class="min-h-screen flex flex-col">
-    <SplashLoader />
+    <SplashLoader v-if="showSplashScreen" @done="showSplashScreen = false" />
     <Navbar @toggle="handleToggle" :is-open="isOpen" />
-
     <SocialSidebar :icons="social" />
+
     <SocialSidebar text="mochamadgalih@gmail.com" side="right" />
     <main class="flex-1 overflow-auto fillHeight">
       <!-- Hero Section -->
@@ -27,6 +27,8 @@ import Navbar from "./components/Navbar.vue";
 import SocialSidebar from "./components/SocialSidebar.vue";
 import Experience from "./components/Experience.vue";
 import SplashLoader from "./components/SplashLoader.vue";
+
+const showSplashScreen = ref(true);
 
 const social = [
   {
