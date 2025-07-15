@@ -4,7 +4,7 @@
 
     <SocialSidebar :icons="social" />
     <SocialSidebar text="mochamadgalih@gmail.com" side="right" />
-    <main class="flex-1 overflow-auto lg:px-40 md:px-28 sm:px-24 px-6">
+    <main class="flex-1 overflow-auto fillHeight">
       <!-- Hero Section -->
       <HeroSection />
       <!-- End Hero Section -->
@@ -12,6 +12,8 @@
       <!-- About  -->
       <AboutSection />
       <!-- End About -->
+
+      <Experience />
     </main>
   </div>
 </template>
@@ -22,6 +24,7 @@ import AboutSection from "./components/AboutSection.vue";
 import HeroSection from "./components/HeroSection.vue";
 import Navbar from "./components/Navbar.vue";
 import SocialSidebar from "./components/SocialSidebar.vue";
+import Experience from "./components/Experience.vue";
 
 const social = [
   {

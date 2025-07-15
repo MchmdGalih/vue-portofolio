@@ -11,7 +11,7 @@
           :key="item.id"
           class="text-slate-100 hover:text-font-green transition-all ease-in-out"
         >
-          <a :href="item.name"
+          <a :href="item.href"
             ><span class="text-font-green">{{ item.num }}</span>
             {{ item.name }}</a
           >
@@ -27,9 +27,9 @@
 import ButtonBurger from "./Button/Burger.vue";
 
 const menu = [
-  { id: 1, num: "01.", name: "About" },
-  { id: 2, num: "02.", name: "Experience" },
-  { id: 3, num: "03.", name: "Work" },
-  { id: 4, num: "04.", name: "Contact" },
+  { id: 1, num: "01.", name: "About", href: "#about" },
+  { id: 2, num: "02.", name: "Experience", href: "#experience" },
+  { id: 3, num: "03.", name: "Work", href: "#work" },
+  { id: 4, num: "04.", name: "Contact", href: "#contact" },
 ];
 </script>
