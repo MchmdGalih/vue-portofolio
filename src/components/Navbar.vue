@@ -21,13 +21,46 @@
       </ul>
 
       <ButtonBurger />
+
+      <!-- Mobile (Only) -->
+      <aside
+        class="fixed w-full h-screen inset-0 box-border flex transition-transform duration-300 ease-in-out"
+        :class="showNav ? 'translate-x-0' : 'translate-x-full'"
+      >
+        <div class="w-[30%] backdrop-blur-sm bg-black/80"></div>
+        <nav class="w-full flex flex-col bg-dark-blue items-center">
+          <ul
+            class="w-full h-full flex flex-col justify-center items-center gap-y-4"
+          >
+            <li
+              v-for="item in menu"
+              :key="item.id"
+              class="text-slate-100 hover:text-font-green text-3xl text-center transition-all ease-in-out cursor-pointer"
+            >
+              <a
+                :href="item.href"
+                @click="toggle"
+                class="flex flex-col relative line"
+                ><span class="text-font-green mb-2">{{ item.num }}</span>
+                {{ item.name }}</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- End Mobile (Only) -->
     </nav>
   </header>
 </template>
 
 <script setup>
+import { inject, ref } from "vue";
 import ButtonBurger from "./Button/Burger.vue";
 import Logo from "./Logo.vue";
+
+const showNav = inject("isOpen");
+const toggle = inject("toggle");
 
 const menu = [
   { id: 1, num: "01.", name: "About", href: "#about" },

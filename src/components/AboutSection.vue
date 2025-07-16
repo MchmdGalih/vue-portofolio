@@ -49,7 +49,7 @@
         <div class="w-full h-full py-3.5 relative order-1 lg:order-2">
           <div class="wrapp w-68 h-68 mx-auto relative">
             <img
-              src="../assets/profile.jpg"
+              src="../assets/image/profile.jpg"
               class="w-full h-full object-cover hover:-translate-4 transition-all delay-200 ease-in-out rounded-md"
             />
           </div>

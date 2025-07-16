@@ -1,4 +1,4 @@
-import "./assets/main.css";
+import "./assets/css/main.css";
 import { createApp } from "vue";
 import { OhVueIcon, addIcons } from "oh-vue-icons";
 import * as FaIcons from "oh-vue-icons/icons/fa";

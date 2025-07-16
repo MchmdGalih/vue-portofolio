@@ -9,7 +9,7 @@
           v-if="showLogo"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 100 100"
-          class="w-50 h-50 text-font-green"
+          class="lg:w-50 lg:h-50 w-25 h-25 text-font-green"
         >
           <!-- Polygon Border -->
           <polygon

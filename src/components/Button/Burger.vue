@@ -1,6 +1,6 @@
 <template>
   <button
-    class="relative flex flex-col justify-center items-center gap-y-1 w-8 h-8 cursor-pointer md:hidden"
+    class="relative flex flex-col justify-center items-center gap-y-1 w-8 h-8 cursor-pointer md:hidden z-10"
     @click="handleClick"
   >
     <span
