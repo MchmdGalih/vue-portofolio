@@ -24,7 +24,7 @@
 
       <!-- Mobile (Only) -->
       <aside
-        class="fixed w-full h-screen inset-0 box-border flex transition-transform duration-300 ease-in-out"
+        class="fixed w-full h-screen bg-dark inset-0 box-border flex transition-transform duration-300 ease-in-out"
         :class="showNav ? 'translate-x-0' : 'translate-x-full'"
       >
         <div class="w-[30%] backdrop-blur-sm bg-black/80"></div>
@@ -35,13 +35,15 @@
             <li
               v-for="item in menu"
               :key="item.id"
-              class="text-slate-100 hover:text-font-green text-3xl text-center transition-all ease-in-out cursor-pointer"
+              class="text-slate-100 hover:text-font-green text-2xl text-center transition-all ease-in-out cursor-pointer"
             >
               <a
                 :href="item.href"
                 @click="toggle"
                 class="flex flex-col relative line"
-                ><span class="text-font-green mb-2">{{ item.num }}</span>
+                ><span class="text-font-green text-xl mb-2">{{
+                  item.num
+                }}</span>
                 {{ item.name }}</a
               >
             </li>
