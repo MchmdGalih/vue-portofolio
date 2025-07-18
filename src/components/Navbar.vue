@@ -3,9 +3,9 @@
     class="w-full fixed z-10 backdrop-blur-sm top-0 py-8 lg:px-14 md:12 px-6"
   >
     <nav class="flex justify-between items-center font-secondary">
-      <div class="w-10 h-10 text-font-green">
+      <a href="#hero" class="w-10 h-10 text-font-green">
         <Logo />
-      </div>
+      </a>
 
       <ul class="hidden md:inline-flex items-center space-x-4 text-sm">
         <li

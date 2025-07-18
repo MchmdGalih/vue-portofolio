@@ -1,5 +1,5 @@
 <template>
-  <section class="h-screen">
+  <section id="hero">
     <div
       class="flex flex-col h-auto lg:py-10 pt-12 lg:items-start md:justify-center"
     >
@@ -32,11 +32,13 @@
         development with Node.js and PostgreSQL.
       </p>
 
-      <button
-        class="mt-12 max-w-max border border-font-green py-4 px-6 rounded-md text-font-green font-primary tracking-wide font-light cursor-pointer hover:-translate-1 hover:shadow-[0.25rem_0.25rem_#64ffcf] focus:scale-95 focus:shadow-[0.25rem_0.25rem_#64ffcf] transform transition-all delay-200 ease-in-out"
-      >
-        Resume
-      </button>
+      <BaseBtn>
+        <a href="#contact" class="text-font-green"> Resume </a>
+      </BaseBtn>
     </div>
   </section>
 </template>
+
+<script setup>
+import BaseBtn from "./Button/BaseBtn.vue";
+</script>

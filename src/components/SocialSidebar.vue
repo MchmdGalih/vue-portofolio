@@ -1,46 +1,34 @@
 <template>
   <div
-    :class="[
-      'hidden md:flex w-[40px]  flex-col lg:px-14   items-center gap-y-5 text-slate-400 fixed bottom-0 z-50 ',
-      side === 'left' ? 'left-0' : 'right-0',
-    ]"
+    class="hidden lg:flex fixed left-0 top-1/2 -translate-y-1/2 z-50 w-[48px] p-4 border-t border-r border-b border-font-green rounded-r-md hover:shadow-[0.25rem_0.25rem_#64ffcf] transform transition-all delay-200 ease-in-out flex-col items-center gap-y-5 text-slate-400"
   >
-    <ul v-if="icons.length" class="flex flex-col items-center space-y-4">
-      <li v-for="(icon, index) in icons" :key="index" class="cursor-pointer">
+    <ul class="flex flex-col items-center space-y-4">
+      <li v-for="(icon, index) in social" :key="index" class="cursor-pointer">
         <RouterLink :to="icon.url">
           <v-icon
             :name="icon.name"
             class="t hover:text-font-green transition"
             scale="1.5"
-        /></RouterLink>
+          />
+        </RouterLink>
       </li>
     </ul>
-
-    <RouterLink
-      v-if="text"
-      class="rotate-90 absolute bottom-[200px] text-md cursor-pointer hover:text-font-green transition"
-      :to="`mailto:${text}`"
-    >
-      {{ text }}
-    </RouterLink>
-
-    <div class="w-0.5 h-24 bg-slate-400"></div>
   </div>
 </template>
 
 <script setup>
-const props = defineProps({
-  icons: {
-    type: Array,
-    default: () => [],
+const social = [
+  {
+    name: "fa-github",
+    url: "https://github.com/MchmdGalih",
   },
-  text: {
-    type: String,
-    default: "",
+  {
+    name: "fa-linkedin",
+    url: "https://www.linkedin.com/in/mochamad-galih-sulistio-pratama",
   },
-  side: {
-    type: String,
-    default: "left",
+  {
+    name: "fa-instagram",
+    url: "https://www.instagram.com/__mochgalih/",
   },
-});
+];
 </script>

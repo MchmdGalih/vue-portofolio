@@ -53,7 +53,12 @@
                   </span>
                 </div>
                 <ul class="mt-3 space-y-2 text-md font-secondary py-2 border-b">
-                  <li v-for="(item, i) in exp.points" :key="i" class="text-sm">
+                  <li
+                    v-for="(item, i) in exp.points"
+                    :key="i"
+                    class="text-sm items-center"
+                  >
+                    <span class="text-font-green text-xl font-bold">»</span>
                     {{ item }}
                   </li>
                 </ul>
@@ -85,10 +90,10 @@ const tabs = [
         position: "Junior Web Developer",
         date: "Dec 2024 – Jan 2025",
         points: [
-          "‣ I participated in a Web Development Bootcamp organized by Rumah Amal Salman in collaboration with Sanbercode, where I studied both foundational and advanced web development concepts.",
-          "‣ Learned HTML, CSS, JavaScript, PHP, Vue.js, Laravel, and MySQL to build efficient and interactive web applications.",
-          "‣ Worked on several hands-on projects that enhanced my understanding of database management, REST APIs, JWT authentication, and application deployment.",
-          "‣ Collaborated in a team environment to develop web-based applications using professional industry workflows.",
+          "I participated in a Web Development Bootcamp organized by Rumah Amal Salman in collaboration with Sanbercode, where I studied both foundational and advanced web development concepts.",
+          "Learned HTML, CSS, JavaScript, PHP, Vue.js, Laravel, and MySQL to build efficient and interactive web applications.",
+          "Worked on several hands-on projects that enhanced my understanding of database management, REST APIs, JWT authentication, and application deployment.",
+          "Collaborated in a team environment to develop web-based applications using professional industry workflows.",
         ],
       },
       {
@@ -96,10 +101,10 @@ const tabs = [
         position: "Fullstack Development",
         date: "May 2023 – July 2023",
         points: [
-          "‣ I had the opportunity to participate in a Fullstack Development bootcamp organized by Alkademi, with a primary focus on frontend fundamentals.",
-          "‣ Learned HTML, CSS, JavaScript, and Nuxt.js to build responsive and interactive user interfaces.",
-          "‣ Strengthened problem-solving and debugging skills.",
-          "‣ Gained experience using version control tools such as Git and GitHub.",
+          "I had the opportunity to participate in a Fullstack Development bootcamp organized by Alkademi, with a primary focus on frontend fundamentals.",
+          "Learned HTML, CSS, JavaScript, and Nuxt.js to build responsive and interactive user interfaces.",
+          "Strengthened problem-solving and debugging skills.",
+          "Gained experience using version control tools such as Git and GitHub.",
         ],
       },
     ],
@@ -111,13 +116,13 @@ const tabs = [
       {
         title: "Dicoding Indonesia",
         position: "Belajar Fundamental Aplikasi Web dengan React",
-        date: "January 2025 - January 2025",
+        date: "January 2025 ",
         points: [
-          "‣ Applying Props Validation using PropTypes to ensure components receive the correct data types.",
-          "‣ Implementing Client-Side Routing with react-router-dom to manage navigation between pages without full page reloads.",
-          "‣ Understanding and using the Component Lifecycle in both class and functional components (e.g. componentDidMount, useEffect).",
-          "‣ Utilizing the Context API (useContext) for global state management and sharing data between components without prop drilling.",
-          "‣ Mastering essential React Hooks like useState, useEffect, useContext,.",
+          "Applying Props Validation using PropTypes to ensure components receive the correct data types.",
+          "Implementing Client-Side Routing with react-router-dom to manage navigation between pages without full page reloads.",
+          "Understanding and using the Component Lifecycle in both class and functional components (e.g. componentDidMount, useEffect).",
+          "Utilizing the Context API (useContext) for global state management and sharing data between components without prop drilling.",
+          "Mastering essential React Hooks like useState, useEffect, useContext,.",
         ],
       },
       {
@@ -125,13 +130,13 @@ const tabs = [
         position: "Responsive Web Design",
         date: "July 2024",
         points: [
-          "‣ Understand the basic structure of web pages and semantic elements using HTML & HTML5.",
-          "‣ Style and format web pages using CSS & CSS3.",
-          "‣ Create flexible one-dimensional layouts using Flexbox.",
-          "‣ Build complex two-dimensional layouts using CSS Grid.",
-          "‣ Apply responsive design principles using media queries and flexible units.",
-          "‣ Learn typography and visual design principles to enhance readability and appearance.",
-          "‣ Gain hands-on experience through project-based learning such as landing pages, forms, and technical documentation.",
+          "Understand the basic structure of web pages and semantic elements using HTML & HTML5.",
+          "Style and format web pages using CSS & CSS3.",
+          "Create flexible one-dimensional layouts using Flexbox.",
+          "Build complex two-dimensional layouts using CSS Grid.",
+          "Apply responsive design principles using media queries and flexible units.",
+          "Learn typography and visual design principles to enhance readability and appearance.",
+          "Gain hands-on experience through project-based learning such as landing pages, forms, and technical documentation.",
         ],
       },
       {
@@ -139,13 +144,13 @@ const tabs = [
         position: "Responsive Web Design",
         date: "July 2024",
         points: [
-          "‣ Build responsive, accessible, and visually appealing layouts using HTML, CSS, and frameworks like Bootstrap 5, Semantic UI, and Bulma.",
-          "‣ Understand and apply core JavaScript concepts including variables, functions, conditionals, loops, arrays, objects, DOM manipulation, and higher-order functions.",
-          "‣ Develop complex front-end applications including animated to-do lists, browser games, and single-page applications using AJAX.",
-          "‣ Create and validate complex HTML forms.",
-          "‣ Implement responsive navigation menus.",
-          "‣ Write full-stack web applications using Node.js, Express, and MongoDB.",
-          "‣ Use tools like Postman for API testing and debugging.",
+          "Build responsive, accessible, and visually appealing layouts using HTML, CSS, and frameworks like Bootstrap 5, Semantic UI, and Bulma.",
+          "Understand and apply core JavaScript concepts including variables, functions, conditionals, loops, arrays, objects, DOM manipulation, and higher-order functions.",
+          "Develop complex front-end applications including animated to-do lists, browser games, and single-page applications using AJAX.",
+          "Create and validate complex HTML forms.",
+          "Implement responsive navigation menus.",
+          "Write full-stack web applications using Node.js, Express, and MongoDB.",
+          "Use tools like Postman for API testing and debugging.",
         ],
       },
       {
@@ -153,13 +158,13 @@ const tabs = [
         position: "Belajar Membuat Aplikasi Back-End untuk Pemula",
         date: "September 2023",
         points: [
-          "‣ Build responsive, accessible, and visually appealing layouts using HTML, CSS, and frameworks like Bootstrap 5, Semantic UI, and Bulma.",
-          "‣ Understand and apply core JavaScript concepts including variables, functions, conditionals, loops, arrays, objects, DOM manipulation, and higher-order functions.",
-          "‣ Develop complex front-end applications including animated to-do lists, browser games, and single-page applications using AJAX.",
-          "‣ Create and validate complex HTML forms.",
-          "‣ Implement responsive navigation menus.",
-          "‣ Write full-stack web applications using Node.js, Express, and MongoDB.",
-          "‣ Use tools like Postman for API testing and debugging.",
+          "Build responsive, accessible, and visually appealing layouts using HTML, CSS, and frameworks like Bootstrap 5, Semantic UI, and Bulma.",
+          "Understand and apply core JavaScript concepts including variables, functions, conditionals, loops, arrays, objects, DOM manipulation, and higher-order functions.",
+          "Develop complex front-end applications including animated to-do lists, browser games, and single-page applications using AJAX.",
+          "Create and validate complex HTML forms.",
+          "Implement responsive navigation menus.",
+          "Write full-stack web applications using Node.js, Express, and MongoDB.",
+          "Use tools like Postman for API testing and debugging.",
         ],
       },
     ],
@@ -173,11 +178,11 @@ const tabs = [
         position: "Operator",
         date: "July 2019 – May 2022",
         points: [
-          "‣ Selected base materials according to specified color requirements, including pigments, inks, dyes, and other raw materials used in the production process.",
-          "‣ Mixed pigments or other materials based on accurate formulas or recipes to achieve the desired color. This involved precise measurement and calculation.",
-          "‣ Conducted color tests to ensure the produced color met the required specifications, often using equipment such as spectrophotometers for accurate color measurement.",
-          "‣ Made careful adjustments to the color formula if the result did not match the target specifications.",
-          "‣ Recorded all color formulas and test results for each product or batch, which was essential for quality tracking and color consistency.",
+          "Selected base materials according to specified color requirements, including pigments, inks, dyes, and other raw materials used in the production process.",
+          "Mixed pigments or other materials based on accurate formulas or recipes to achieve the desired color. This involved precise measurement and calculation.",
+          "Conducted color tests to ensure the produced color met the required specifications, often using equipment such as spectrophotometers for accurate color measurement.",
+          "Made careful adjustments to the color formula if the result did not match the target specifications.",
+          "Recorded all color formulas and test results for each product or batch, which was essential for quality tracking and color consistency.",
         ],
       },
     ],

@@ -2,19 +2,16 @@
   <div class="min-h-screen flex flex-col">
     <SplashLoader v-if="showSplashScreen" @done="showSplashScreen = false" />
     <Navbar @toggle="handleToggle" :is-open="isOpen" />
-    <SocialSidebar :icons="social" />
+    <SocialSidebar />
 
     <SocialSidebar text="mochamadgalih@gmail.com" side="right" />
     <main class="flex-1 overflow-auto fillHeight">
-      <!-- Hero Section -->
       <HeroSection />
-      <!-- End Hero Section -->
-
-      <!-- About  -->
       <AboutSection />
-      <!-- End About -->
-
       <Experience />
+      <Project />
+      <Contact />
+      <Footer />
     </main>
   </div>
 </template>
@@ -27,23 +24,11 @@ import Navbar from "./components/Navbar.vue";
 import SocialSidebar from "./components/SocialSidebar.vue";
 import Experience from "./components/Experience.vue";
 import SplashLoader from "./components/SplashLoader.vue";
+import Footer from "./components/Footer.vue";
+import Project from "./components/Project.vue";
+import Contact from "./components/Contact.vue";
 
 const showSplashScreen = ref(true);
-
-const social = [
-  {
-    name: "fa-github",
-    url: "https://github.com/MchmdGalih",
-  },
-  {
-    name: "fa-linkedin",
-    url: "https://www.linkedin.com/in/mochamad-galih-sulistio-pratama",
-  },
-  {
-    name: "fa-instagram",
-    url: "https://www.instagram.com/__mochgalih/",
-  },
-];
 
 const isOpen = ref(false);
 const handleToggle = () => {
