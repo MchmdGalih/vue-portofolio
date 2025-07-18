@@ -1,8 +1,8 @@
 <template>
   <header
-    class="w-full fixed z-10 backdrop-blur-sm top-0 py-8 lg:px-14 md:12 px-6"
+    class="w-full fixed z-10 backdrop-blur-sm top-0 lg:py-8 md:py-4 py-2 lg:px-14 md:12 px-6"
   >
-    <nav class="flex justify-between items-center font-secondary">
+    <nav class="flex justify-between items-center font-secondary py-">
       <a href="#hero" class="w-10 h-10 text-font-green">
         <Logo />
       </a>

@@ -1,6 +1,6 @@
 <template>
   <div
-    class="hidden lg:flex fixed left-0 top-1/2 -translate-y-1/2 z-50 w-[48px] p-4 border-t border-r border-b border-font-green rounded-r-md hover:shadow-[0.25rem_0.25rem_#64ffcf] transform transition-all delay-200 ease-in-out flex-col items-center gap-y-5 text-slate-400"
+    class="hidden lg:flex ml-2 fixed left-0 top-1/2 -translate-y-1/6 z-50 w-[48px] p-4 border border-font-green rounded-md hover:shadow-[0.25rem_0.25rem_#64ffcf] transform transition-all delay-200 ease-in-out flex-col items-center gap-y-5 text-slate-400 float-bounce"
   >
     <ul class="flex flex-col items-center space-y-4">
       <li v-for="(icon, index) in social" :key="index" class="cursor-pointer">

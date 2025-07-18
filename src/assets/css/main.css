@@ -116,3 +116,17 @@ section {
     transform: scale(1);
   }
 }
+
+@keyframes float-bounce {
+  0%,
+  100% {
+    transform: translateY(-50%) translateY(0);
+  }
+  50% {
+    transform: translateY(-50%) translateY(-10px);
+  }
+}
+
+.float-bounce {
+  animation: float-bounce 2s ease-in-out infinite;
+}
