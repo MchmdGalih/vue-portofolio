@@ -67,7 +67,7 @@ const toggle = inject("toggle");
 const menu = [
   { id: 1, num: "01.", name: "About", href: "#about" },
   { id: 2, num: "02.", name: "Experience", href: "#experience" },
-  { id: 3, num: "03.", name: "Work", href: "#work" },
+  { id: 3, num: "03.", name: "Project", href: "#project" },
   { id: 4, num: "04.", name: "Contact", href: "#contact" },
 ];
 </script>

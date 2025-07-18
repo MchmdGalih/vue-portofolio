@@ -1,6 +1,6 @@
 <template>
   <section id="about">
-    <div class="max-w-[900px] lg:py-0 md:py-4 py-10 lg:px-16 px-0">
+    <div class="max-w-[900px] mx-auto lg:py-0 md:py-4 py-10 lg:px-16 px-0">
       <div class="inline-flex space-x-2 items-center font-secondary mb-6">
         <span class="text-font-green md:text-2xl text-xl">01.</span>
         <h1
