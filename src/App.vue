@@ -3,13 +3,12 @@
     <SplashLoader v-if="showSplashScreen" @done="showSplashScreen = false" />
     <Navbar @toggle="handleToggle" :is-open="isOpen" />
     <SocialSidebar />
-
-    <SocialSidebar text="mochamadgalih@gmail.com" side="right" />
     <main class="flex-1 overflow-auto fillHeight">
       <HeroSection />
       <AboutSection />
       <Experience />
       <Project />
+      <Certificate />
       <Contact />
       <Footer />
     </main>
@@ -27,6 +26,7 @@ import SplashLoader from "./components/SplashLoader.vue";
 import Footer from "./components/Footer.vue";
 import Project from "./components/Project.vue";
 import Contact from "./components/Contact.vue";
+import Certificate from "./components/Certificate.vue";
 
 const showSplashScreen = ref(true);
 

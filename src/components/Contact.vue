@@ -4,7 +4,7 @@
       <div class="inline-flex space-x-1.5 items-center font-secondary mb-3">
         <span class="text-font-green md:text-2xl text-xl">04.</span>
         <h1 class="text-slate-300 md:text-2xl text-xl font-medium">
-          Reach out.
+          Reach Out.
         </h1>
         <div
           class="lg:w-[200px] md:w-[120px] hidden sm:block border border-slate-300"
@@ -21,7 +21,7 @@
 
       <BaseBtn>
         <a
-         href="mailto:mochamadglh@gmail.com"
+          href="mailto:mochamadglh@gmail.com"
           target="_blank"
           class="text-font-green"
           rel="noopener noreferrer"
