@@ -103,6 +103,7 @@ section {
 .bounce-leave-active {
   animation: bounce-in 0.5s ease reverse;
 }
+
 @keyframes bounce-in {
   0% {
     transform: scale(0);
@@ -129,4 +130,15 @@ section {
 
 .float-bounce {
   animation: float-bounce 2s ease-in-out infinite;
+}
+
+.logo-enter {
+  opacity: 0;
+  transform: translateY(-50px);
+  transition: all 0.8s ease;
+}
+
+.logo-enter-active {
+  opacity: 1;
+  transform: translateY(0);
 }

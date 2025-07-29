@@ -1,5 +1,5 @@
 <template>
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <svg ref="logoEl" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
     <polygon
       points="50,5 95,27 95,73 50,95 5,73 5,27"
       stroke="currentColor"
@@ -21,3 +21,14 @@
     </text>
   </svg>
 </template>
+
+<script setup>
+import { ref, defineExpose } from "vue";
+
+const logoEl = ref(null);
+
+// Agar bisa diakses dari parent
+defineExpose({
+  el: logoEl,
+});
+</script>

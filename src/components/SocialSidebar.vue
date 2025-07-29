@@ -4,13 +4,15 @@
   >
     <ul class="flex flex-col items-center space-y-4">
       <li v-for="(icon, index) in social" :key="index" class="cursor-pointer">
-        <RouterLink :to="icon.url">
+        <a :href="icon.url"
+  target="_blank"
+  rel="noopener noreferrer">
           <v-icon
             :name="icon.name"
             class="t hover:text-font-green transition"
             scale="1.5"
           />
-        </RouterLink>
+        </a>
       </li>
     </ul>
   </div>

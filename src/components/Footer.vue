@@ -2,12 +2,14 @@
   <footer class="py-4 flex-col text-center text-slate-300">
     <ul class="flex md:hidden justify-center items-center gap-x-4 mb-2">
       <li v-for="(icon, index) in social" :key="index">
-        <RouterLink :to="icon.url">
+        <a :href="icon.url"
+  target="_blank"
+  rel="noopener noreferrer">
           <v-icon
             :name="icon.name"
             class="text-slate-300 hover:text-font-green transition"
             scale="1.5"
-        /></RouterLink>
+        /></a>
       </li>
     </ul>
 

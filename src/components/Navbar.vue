@@ -4,7 +4,7 @@
   >
     <nav class="flex justify-between items-center font-secondary py-">
       <a href="#hero" class="w-10 h-10 text-font-green">
-        <Logo />
+        <Logo ref="logoRef" />
       </a>
 
       <ul class="hidden md:inline-flex items-center space-x-4 text-sm">
@@ -57,12 +57,14 @@
 </template>
 
 <script setup>
-import { inject, ref } from "vue";
+import { inject, onMounted, ref } from "vue";
 import ButtonBurger from "./Button/Burger.vue";
 import Logo from "./Logo.vue";
 
+const logoRef = ref(null);
 const showNav = inject("isOpen");
 const toggle = inject("toggle");
+const logoVisible = ref(false);
 
 const menu = [
   { id: 1, num: "01.", name: "About", href: "#about" },
@@ -70,4 +72,18 @@ const menu = [
   { id: 3, num: "03.", name: "Project", href: "#project" },
   { id: 4, num: "04.", name: "Contact", href: "#contact" },
 ];
+
+onMounted(() => {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        logoVisible.value = true;
+      }
+    });
+  });
+
+  if (logoRef.value?.el) {
+    observer.observe(logoRef.value.el);
+  }
+});
 </script>
