@@ -12,4 +12,5 @@ addIcons(...Fa);
 const app = createApp(App);
 app.component("v-icon", OhVueIcon);
 app.use(Marquee);
+
 app.mount("#app");

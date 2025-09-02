@@ -35,6 +35,7 @@
         gradient-width="50px"
         pauseOnClick
         pauseOnHover
+      
       >
         <figure
           class="w-auto lg:h-96 md:h-64 h-48 border border-font-green rounded-md mr-4 ml-4"
