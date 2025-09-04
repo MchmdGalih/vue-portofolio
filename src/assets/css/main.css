@@ -91,6 +91,7 @@ section {
   animation: fadeIn 1s ease forwards;
   animation-delay: 2s;
 }
+
 @keyframes fadeIn {
   to {
     opacity: 1;

@@ -1,24 +1,27 @@
 <template>
-  <div
-    class="hidden lg:flex ml-2 fixed left-0 top-1/2 -translate-y-1/6 z-50 w-[48px] p-4 border border-font-green rounded-md hover:shadow-[0.25rem_0.25rem_#64ffcf] transform transition-all delay-200 ease-in-out flex-col items-center gap-y-5 text-slate-400 float-bounce"
-  >
-    <ul class="flex flex-col items-center space-y-4">
-      <li v-for="(icon, index) in social" :key="index" class="cursor-pointer">
-        <a :href="icon.url"
-  target="_blank"
-  rel="noopener noreferrer">
-          <v-icon
-            :name="icon.name"
-            class="t hover:text-font-green transition"
-            scale="1.5"
-          />
-        </a>
-      </li>
-    </ul>
-  </div>
+  <Transition name="fade-in" v-if="start">
+    <div
+      class="hidden lg:flex ml-2 fixed left-0 top-1/2 -translate-y-1/6 z-50 w-[48px] p-4 border border-font-green rounded-md hover:shadow-[0.25rem_0.25rem_#64ffcf] transform transition-all delay-200 ease-in-out flex-col items-center gap-y-5 text-slate-400 float-bounce"
+      :style="{ transitionDelay: '1200ms' }"
+    >
+      <ul class="flex flex-col items-center space-y-4">
+        <li v-for="(icon, index) in social" :key="index" class="cursor-pointer">
+          <a :href="icon.url" target="_blank" rel="noopener noreferrer">
+            <v-icon
+              :name="icon.name"
+              class="t hover:text-font-green transition"
+              scale="1.5"
+            />
+          </a>
+        </li>
+      </ul>
+    </div>
+  </Transition>
 </template>
 
 <script setup>
+const props = defineProps({ start: Boolean });
+
 const social = [
   {
     name: "fa-github",
