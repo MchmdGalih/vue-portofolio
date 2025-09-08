@@ -6,10 +6,10 @@
       <SocialSidebar :start="start" />
       <main class="flex-1 overflow-auto fillHeight">
         <HeroSection :start="start" />
-        <AboutSection />
+        <AboutSection  />
         <Experience />
         <Project />
-        <Certificate />
+        <Certificate  />
         <Contact />
         <Footer />
       </main>

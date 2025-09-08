@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="scroll-animation">
     <div class="flex flex-col gap-y-12 items-center overflow-x-hidden">
       <div class="block space-y-2 items-center text-center font-secondary mb-3">
         <h1 class="text-slate-300 md:text-2xl text-xl">A Few Certificates.</h1>
@@ -35,7 +35,6 @@
         gradient-width="50px"
         pauseOnClick
         pauseOnHover
-      
       >
         <figure
           class="w-auto lg:h-96 md:h-64 h-48 border border-font-green rounded-md mr-4 ml-4"

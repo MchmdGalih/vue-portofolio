@@ -68,4 +68,37 @@ onMounted(() => {
     stroke-dashoffset: 0;
   }
 }
+
+.fade-in {
+  animation: fadeIn 1s ease forwards;
+  opacity: 0;
+  animation-delay: 2s;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.bounce-enter-active {
+  animation: bounce-in 0.5s ease;
+}
+.bounce-leave-active {
+  animation: bounce-in 0.5s ease reverse;
+}
+
+@keyframes bounce-in {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 </style>

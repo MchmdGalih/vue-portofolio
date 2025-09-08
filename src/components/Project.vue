@@ -1,5 +1,5 @@
 <template>
-  <section id="project">
+  <section id="project" class="scroll-animation">
     <div class="inline-flex space-x-1.5 items-center font-secondary mb-6">
       <span class="text-font-green md:text-2xl text-xl">03.</span>
       <h1 class="text-slate-300 md:text-2xl text-xl font-medium">

@@ -65,9 +65,10 @@
 </template>
 
 <script setup>
-import { inject, Transition } from "vue";
+import { inject, onMounted, ref, Transition } from "vue";
 import ButtonBurger from "./Button/Burger.vue";
 import Logo from "./Logo.vue";
+
 const showNav = inject("isOpen");
 const toggle = inject("toggle");
 
@@ -101,5 +102,19 @@ const menu = [
 .fade-up-enter-to {
   opacity: 1;
   transform: translateY(0);
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.6s ease forwards;
 }
 </style>

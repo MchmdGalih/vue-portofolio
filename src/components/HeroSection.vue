@@ -3,7 +3,9 @@
     <div
       class="flex flex-col h-auto lg:py-10 pt-12 lg:items-start md:justify-center"
     >
-      <h1 class="text-font-green text-secondary text-md mb-2 font-normal">
+      <h1
+        class="text-font-green text-secondary text-md mb-2 font-normal "
+      >
         Hi, my name is
       </h1>
 
@@ -40,5 +42,7 @@
 </template>
 
 <script setup>
+const props = defineProps({ start: Boolean });
+
 import BaseBtn from "./Button/BaseBtn.vue";
 </script>

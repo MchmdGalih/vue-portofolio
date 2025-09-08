@@ -11,7 +11,7 @@
         ></div>
       </div>
       <p
-        class="max-w-[600px] p-4 text-center text-transparent bg-clip-text bg-gradient-to-l from-slate-100 to-slate-400 font-bold text-xl font-primary"
+        class="max-w-[600px] p-4 text-center text-transparent bg-clip-text bg-gradient-to-l scroll-animation from-slate-100 to-slate-400 font-bold text-xl font-primary"
       >
         I’m open to exciting new opportunities — especially if you're looking to
         add a passionate and driven developer to your team. Whether it’s a

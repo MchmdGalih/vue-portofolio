@@ -1,6 +1,8 @@
 <template>
   <section id="experience">
-    <div class="inline-flex space-x-1.5 items-center font-secondary mb-6">
+    <div
+      class="inline-flex space-x-1.5 items-center font-secondary mb-6 text-appear"
+    >
       <span class="text-font-green md:text-2xl text-xl">02.</span>
       <h1 class="text-slate-300 md:text-2xl text-xl font-medium">
         Where I've Experience.
