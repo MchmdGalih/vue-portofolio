@@ -21,6 +21,13 @@
 <script setup>
 import { inject } from "vue";
 
+const props = defineProps({
+  visble: {
+    type: Boolean,
+    default: false,
+  },
+});
+
 const isOpen = inject("isOpen");
 const toggle = inject("toggle");
 
@@ -28,3 +35,26 @@ const handleClick = () => {
   if (toggle) toggle();
 };
 </script>
+
+<style scoped>
+.fade-down-enter-active,
+.fade-down-leave-active {
+  transition: all 0.6s ease;
+}
+.fade-down-enter-from {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+.fade-down-enter-to {
+  opacity: 1;
+  transform: translateY(0);
+}
+.fade-down-leave-from {
+  opacity: 1;
+  transform: translateY(0);
+}
+.fade-down-leave-to {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+</style>

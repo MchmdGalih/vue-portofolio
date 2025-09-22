@@ -1,15 +1,15 @@
 <template>
   <div class="min-h-screen flex flex-col">
-    <SplashLoader v-if="showSplashScreen" @done="handleSplashDone" />
+    <SplashLoader v-if="showSplashScreen" @done="showSplashScreen = false" />
     <div v-else>
-      <Navbar :start="start" @toggle="handleToggle" :is-open="isOpen" />
-      <SocialSidebar :start="start" />
-      <main class="flex-1 overflow-auto fillHeight">
-        <HeroSection :start="start" />
-        <AboutSection  />
+      <Navbar @toggle="handleToggle" :is-open="isOpen" />
+      <SocialSidebar />
+      <main class="flex-1 fillHeight">
+        <HeroSection ref="heroRef" />
+        <AboutSection />
         <Experience />
         <Project />
-        <Certificate  />
+        <Certificate />
         <Contact />
         <Footer />
       </main>
@@ -30,20 +30,11 @@ import Project from "./components/Project.vue";
 import Contact from "./components/Contact.vue";
 import Certificate from "./components/Certificate.vue";
 
-const showSplashScreen = ref(true);
-const start = ref(false);
-
 const isOpen = ref(false);
 const handleToggle = () => {
   isOpen.value = !isOpen.value;
 };
-
-const handleSplashDone = () => {
-  showSplashScreen.value = false;
-  setTimeout(() => {
-    start.value = true;
-  }, 200);
-};
+const showSplashScreen = ref(true);
 
 provide("isOpen", isOpen);
 provide("toggle", handleToggle);

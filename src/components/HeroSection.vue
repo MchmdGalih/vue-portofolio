@@ -1,18 +1,16 @@
 <template>
-  <section id="hero">
+  <section id="hero" ref="sectionRef">
     <div
       class="flex flex-col h-auto lg:py-10 pt-12 lg:items-start md:justify-center"
     >
-      <h1
-        class="text-font-green text-secondary text-md mb-2 font-normal "
-      >
+      <h1 class="text-font-green text-secondary text-md mb-2 font-normal">
         Hi, my name is
       </h1>
 
       <h2
         class="text-transparent bg-clip-text bg-gradient-to-b lg:text-6xl text-4xl text-secondary font-bold from-slate-100 to-slate-400"
       >
-        Moch Galih Sulistio Pratama.
+        Mochamad Galih Sulistio Pratama.
       </h2>
 
       <h3
@@ -42,7 +40,10 @@
 </template>
 
 <script setup>
-const props = defineProps({ start: Boolean });
-
+import { useIntersectionObserver } from "../composable/useIntersectionObserver";
 import BaseBtn from "./Button/BaseBtn.vue";
+import { ref } from "vue";
+
+const sectionRef = ref(null);
+const { isVisible } = useIntersectionObserver(sectionRef);
 </script>

@@ -1,8 +1,14 @@
 <template>
-  <section id="about">
+  <section id="about" ref="sectionRef">
     <div class="max-w-[750px] mx-auto lg:py-0 md:py-4 py-10">
       <div
-        class="inline-flex space-x-2 items-center font-secondary mb-6 text-appear"
+        class="inline-flex space-x-2 items-center font-secondary mb-6"
+        :class="
+          stageredAnimation
+            ? 'translate-y-0 opacity-100'
+            : '-translate-y-10 opacity-0'
+        "
+        style="transition: all 0.8s ease; transition-delay: 0.4s"
       >
         <span class="text-font-green md:text-2xl text-xl">01.</span>
         <h1
@@ -16,7 +22,13 @@
         class="w-full grid lg:grid-cols-2 md:grid-cols-1 grid-cols-1 gap-x-2 gap-y-6 text-slate-50"
       >
         <div
-          class="space-y-2.5 tracking-wide font-primary text-slate-300 lg:order-1 order-2 autoShowLeft"
+          class="space-y-2.5 tracking-wide font-primary text-slate-300 lg:order-1 order-2"
+          :class="
+            stageredAnimation
+              ? 'translate-x-0 opacity-100'
+              : '-translate-x-10 opacity-0'
+          "
+          style="transition: all 1.2s ease; transition-delay: 0.4s"
         >
           <p>
             Hello! My name is Galih, and I enjoy building things for the web. I
@@ -49,7 +61,13 @@
         </div>
 
         <div
-          class="w-full h-full py-3.5 relative order-1 lg:order-2 autoShowRight"
+          class="w-full h-full py-3.5 relative order-1 lg:order-2"
+          :class="
+            stageredAnimation
+              ? 'translate-x-0 opacity-100'
+              : 'translate-x-10 opacity-0'
+          "
+          style="transition: all 1.2s ease; transition-delay: 0.4s"
         >
           <div class="wrapp w-68 h-68 mx-auto relative">
             <img
@@ -64,6 +82,21 @@
 </template>
 
 <script setup>
+import { useIntersectionObserver } from "../composable/useIntersectionObserver";
+import { ref, watch } from "vue";
+
+const sectionRef = ref(null);
+const { isVisible } = useIntersectionObserver(sectionRef);
+const stageredAnimation = ref(false);
+
+watch(isVisible, (val) => {
+  if (val) {
+    stageredAnimation.value = true;
+  } else {
+    stageredAnimation.value = false;
+  }
+});
+
 const techs = [
   { id: 1, name: "Javascript" },
   { id: 2, name: "Vue Js" },
