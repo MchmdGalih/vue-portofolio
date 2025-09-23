@@ -1,38 +1,32 @@
 <template>
-  <section id="hero" ref="sectionRef">
+  <section id="hero">
     <div
       class="flex flex-col h-auto lg:py-10 pt-12 lg:items-start md:justify-center"
+      ref="targetRef"
     >
-      <h1 class="text-font-green text-secondary text-md mb-2 font-normal">
-        Hi, my name is
-      </h1>
-
-      <h2
-        class="text-transparent bg-clip-text bg-gradient-to-b lg:text-6xl text-4xl text-secondary font-bold from-slate-100 to-slate-400"
+      <component
+        v-for="(item, index) in items"
+        :key="item.id"
+        :is="item.tag"
+        :class="[
+          item.class,
+          'opacity-0 -translate-x-10 transition-all duration-400 ease-out',
+          isVisible ? 'opacity-100 translate-x-0' : '',
+        ]"
+        :style="{
+          transitionDelay: isVisible ? `${index * 300 + 1450}ms` : '0ms',
+        }"
       >
-        Mochamad Galih Sulistio Pratama.
-      </h2>
+        {{ item.text }}
+      </component>
 
-      <h3
-        class="text-transparent py-2 lg:text-6xl text-4xl leading-none text-secondary font-bold bg-clip-text bg-gradient-to-t from-slate-100 to-slate-400 mt-1.5"
+      <BaseBtn
+        class="opacity-0 -translate-x-10 transition-all duration-400 ease-out"
+        :class="{ 'opacity-100 translate-x-0': isVisible }"
+        :style="{
+          transitionDelay: isVisible ? `${items.length * 300 + 1450}ms` : '0ms',
+        }"
       >
-        I Build things for the web.
-      </h3>
-      <p class="text-slate-300 max-w-[540px] font-primary mt-5">
-        I’m a self-taught
-        <span class="relative line cursor-pointer text-font-green"
-          >web developer</span
-        >
-        currently focused on learning both frontend and backend technologies to
-        become a
-        <span class="relative line inline-block cursor-pointer text-font-green"
-          >fullstack developer</span
-        >. My current focus is on building responsive, user-friendly web
-        applications using Vue.js, Tailwind CSS, and exploring backend
-        development with Node.js and PostgreSQL.
-      </p>
-
-      <BaseBtn>
         <a href="#contact" class="text-font-green"> Resume </a>
       </BaseBtn>
     </div>
@@ -42,8 +36,31 @@
 <script setup>
 import { useIntersectionObserver } from "../composable/useIntersectionObserver";
 import BaseBtn from "./Button/BaseBtn.vue";
-import { ref } from "vue";
 
-const sectionRef = ref(null);
-const { isVisible } = useIntersectionObserver(sectionRef);
+const { targetRef, isVisible } = useIntersectionObserver();
+
+const items = [
+  {
+    tag: "h1",
+    text: "Hi, my name is",
+    class: "text-font-green text-md font-normal",
+  },
+  {
+    tag: "h2",
+    text: "Mochamad Galih Sulistio Pratama.",
+    class:
+      "text-transparent bg-clip-text bg-gradient-to-b lg:text-6xl text-4xl font-bold from-slate-100 to-slate-400",
+  },
+  {
+    tag: "h3",
+    text: "I Build things for the web.",
+    class:
+      "text-transparent py-2 lg:text-6xl text-4xl leading-none font-bold bg-clip-text bg-gradient-to-t from-slate-100 to-slate-400 mt-1.5",
+  },
+  {
+    tag: "p",
+    text: "I’m a self-taught web developer currently focused on learning both frontend and backend technologies to become a fullstack developer.",
+    class: "text-slate-300 max-w-[540px] font-primary mt-5",
+  },
+];
 </script>

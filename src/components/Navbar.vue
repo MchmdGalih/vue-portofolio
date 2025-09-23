@@ -1,35 +1,38 @@
 <template>
   <header
-    ref="sectionRef"
     class="w-full fixed z-20 backdrop-blur-sm top-0 lg:py-8 md:py-4 py-2 lg:px-14 md:12 px-6"
+    ref="targetRef"
   >
     <nav class="flex justify-between items-center font-secondary">
-      <Transition name="fade-up">
-        <a v-show="isVisible" href="#hero" class="w-10 h-10 text-font-green">
-          <Logo />
-        </a>
-      </Transition>
-
-      <TransitionGroup
-        name="fade-down"
-        tag="ul"
-        class="hidden md:inline-flex items-center space-x-4 text-sm"
+      <a
+        href="#hero"
+        class="w-10 h-10 text-font-green opacity-0 -translate-y-5 transition-all duration-700 ease-out"
+        :class="{ 'opacity-100 translate-y-0': isVisible }"
+        :style="{ transitionDelay: isVisible ? '0ms' : '0ms' }"
       >
+        <Logo />
+      </a>
+
+      <ul class="hidden md:inline-flex items-center space-x-4 text-sm">
         <li
-          v-show="isVisible"
           v-for="(item, index) in menu"
           :key="item.id"
-          class="text-slate-100 hover:text-font-green transition-all ease-in-out"
-          :style="{ transitionDelay: 200 * index + 'ms' }"
+          class="text-slate-100 hover:text-font-green opacity-0 -translate-x-1 transition-all duration-500 ease-in-out cursor-pointer"
+          :class="{ 'opacity-100 translate-x-0': isVisible }"
+          :style="{ transitionDelay: isVisible ? `${index * 300}ms` : '0ms' }"
         >
           <a :href="item.href"
             ><span class="text-font-green">{{ item.num }}</span>
             {{ item.name }}</a
           >
         </li>
-      </TransitionGroup>
+      </ul>
 
-      <ButtonBurger :visble="isVisible" />
+      <ButtonBurger
+        class="opacity-0 -translate-y-5 transition-all duration-700 ease-out"
+        :class="{ 'opacity-100 translate-y-0': isVisible }"
+        :style="{ transitionDelay: isVisible ? '100ms' : '0ms' }"
+      />
 
       <!-- Mobile (Only) -->
       <aside
@@ -73,8 +76,7 @@ import { useIntersectionObserver } from "../composable/useIntersectionObserver";
 
 const showNav = inject("isOpen");
 const toggle = inject("toggle");
-const sectionRef = ref(null);
-const { isVisible } = useIntersectionObserver(sectionRef);
+const { targetRef, isVisible } = useIntersectionObserver();
 
 const menu = [
   { id: 1, num: "01.", name: "About", href: "#about" },

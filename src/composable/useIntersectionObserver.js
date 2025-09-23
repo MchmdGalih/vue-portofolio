@@ -1,10 +1,8 @@
 import { ref, onMounted, onUnmounted, nextTick } from "vue";
 
-export function useIntersectionObserver(
-  targetRef,
-  options = { threshold: 0.2 }
-) {
+export function useIntersectionObserver(options = { threshold: 0.2 }) {
   const isVisible = ref(false);
+  const targetRef = ref(null);
   let observer;
 
   onMounted(async () => {
@@ -12,8 +10,8 @@ export function useIntersectionObserver(
 
     observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        console.log(entry);
-        if (entry.isIntersecting) isVisible.value = entry.isIntersecting;
+        console.log(entry.isIntersecting);
+        isVisible.value = entry.isIntersecting;
       });
     }, options);
 
@@ -21,8 +19,8 @@ export function useIntersectionObserver(
   });
 
   onUnmounted(() => {
-    observer.disconnect();
+    if (observer && targetRef.value) observer.unobserve(targetRef.value);
   });
 
-  return { isVisible };
+  return { targetRef, isVisible };
 }

@@ -21,13 +21,6 @@
 <script setup>
 import { inject } from "vue";
 
-const props = defineProps({
-  visble: {
-    type: Boolean,
-    default: false,
-  },
-});
-
 const isOpen = inject("isOpen");
 const toggle = inject("toggle");
 

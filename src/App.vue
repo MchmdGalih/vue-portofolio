@@ -4,8 +4,8 @@
     <div v-else>
       <Navbar @toggle="handleToggle" :is-open="isOpen" />
       <SocialSidebar />
-      <main class="flex-1 fillHeight">
-        <HeroSection ref="heroRef" />
+      <main class="flex-1 overflow-auto fillHeight">
+        <HeroSection />
         <AboutSection />
         <Experience />
         <Project />
@@ -31,10 +31,11 @@ import Contact from "./components/Contact.vue";
 import Certificate from "./components/Certificate.vue";
 
 const isOpen = ref(false);
+const showSplashScreen = ref(true);
+
 const handleToggle = () => {
   isOpen.value = !isOpen.value;
 };
-const showSplashScreen = ref(true);
 
 provide("isOpen", isOpen);
 provide("toggle", handleToggle);
