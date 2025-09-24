@@ -1,6 +1,10 @@
 <template>
   <section id="project" class="scroll-animation">
-    <div class="inline-flex space-x-1.5 items-center font-secondary mb-6">
+    <div
+      class="inline-flex space-x-1.5 items-center font-secondary mb-6"
+      ref="headingRef"
+      :class="headingVisible ? 'text-appear' : 'opacity-0'"
+    >
       <span class="text-font-green md:text-2xl text-xl">03.</span>
       <h1 class="text-slate-300 md:text-2xl text-xl font-medium">
         Some Things I've Built.
@@ -130,6 +134,11 @@ import apiReviewFilm from "../assets/image/be-review-film.jpg";
 import ecommerce from "../assets/image/e-commerce.jpg";
 import libblion from "../assets/image/libblion.jpg";
 import incafe from "../assets/image/in-cafe.jpg";
+import { ref, watch } from "vue";
+import {
+  useIntersectionObserver,
+  useMultiObserver,
+} from "../composable/useIntersectionObserver";
 
 const data = [
   {
@@ -180,4 +189,7 @@ const data = [
     github: "https://github.com/MchmdGalih/FE-Kelompok5",
   },
 ];
+
+const headingRef = ref(null);
+const { isVisible: headingVisible } = useIntersectionObserver(headingRef);
 </script>

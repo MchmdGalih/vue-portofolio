@@ -10,21 +10,21 @@
         :is="item.tag"
         :class="[
           item.class,
-          'opacity-0 -translate-x-10 transition-all duration-400 ease-out',
-          isVisible ? 'opacity-100 translate-x-0' : '',
+          ' -translate-x-10 transition-all duration-400 ease-out',
+          isVisible ? 'opacity-100 translate-x-0' : 'opacity-0',
         ]"
         :style="{
-          transitionDelay: isVisible ? `${index * 300 + 1450}ms` : '0ms',
+          transitionDelay: isVisible ? `${index * 300 + 1300}ms` : '0ms',
         }"
       >
         {{ item.text }}
       </component>
 
       <BaseBtn
-        class="opacity-0 -translate-x-10 transition-all duration-400 ease-out"
+        class="opacity-0 -translate-x-10 transition-all duration-400 ease-in"
         :class="{ 'opacity-100 translate-x-0': isVisible }"
         :style="{
-          transitionDelay: isVisible ? `${items.length * 300 + 1450}ms` : '0ms',
+          transitionDelay: isVisible ? `${items.length * 300 + 1300}ms` : '0ms',
         }"
       >
         <a href="#contact" class="text-font-green"> Resume </a>
@@ -34,10 +34,11 @@
 </template>
 
 <script setup>
+import { ref } from "vue";
 import { useIntersectionObserver } from "../composable/useIntersectionObserver";
 import BaseBtn from "./Button/BaseBtn.vue";
-
-const { targetRef, isVisible } = useIntersectionObserver();
+const targetRef = ref(null);
+const { isVisible } = useIntersectionObserver(targetRef);
 
 const items = [
   {

@@ -1,10 +1,12 @@
 <template>
   <section id="experience">
     <div
-      class="inline-flex space-x-1.5 items-center font-secondary mb-6 text-appear"
+      class="inline-flex space-x-1.5 items-center font-secondary mb-6"
+      ref="headingRef"
+      :class="headingVisible ? 'text-appear' : 'opacity-0'"
     >
       <span class="text-font-green md:text-2xl text-xl">02.</span>
-      <h1 class="text-slate-300 md:text-2xl text-xl font-medium">
+      <h1 class="text-slate-300 md:text-2xl text-xl line relative font-medium">
         Where I've Experience.
       </h1>
       <div
@@ -12,7 +14,15 @@
       ></div>
     </div>
     <div class="max-w-[700px] flex-col">
-      <div class="flex flex-col gap-y-2">
+      <div
+        class="flex flex-col gap-y-2 transform transition-all duration-1000 ease-out"
+        ref="tabsRef"
+        :class="
+          tabsVisible
+            ? 'opacity-100 translate-y-0'
+            : 'opacity-0  translate-y-25'
+        "
+      >
         <ul
           class="flex overflow-x-auto gap-4 whitespace-nowrap items-center border border-font-green rounded-md py-4 cursor-pointer text-slate-300"
         >
@@ -75,8 +85,12 @@
 
 <script setup>
 import { computed, ref } from "vue";
-
+import { useIntersectionObserver } from "../composable/useIntersectionObserver";
 const activeTab = ref("bootcamps");
+const tabsRef = ref(null);
+const headingRef = ref(null);
+const { isVisible: headingVisible } = useIntersectionObserver(headingRef);
+const { isVisible: tabsVisible } = useIntersectionObserver(tabsRef);
 
 const currentExperiences = computed(() => {
   return tabs.find((tab) => tab.id === activeTab.value)?.experiences || [];

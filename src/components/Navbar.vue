@@ -17,7 +17,7 @@
         <li
           v-for="(item, index) in menu"
           :key="item.id"
-          class="text-slate-100 hover:text-font-green opacity-0 -translate-x-1 transition-all duration-500 ease-in-out cursor-pointer"
+          class="text-slate-100 hover:text-font-green opacity-0 -translate-x-1 transition-all duration-500 ease-in cursor-pointer"
           :class="{ 'opacity-100 translate-x-0': isVisible }"
           :style="{ transitionDelay: isVisible ? `${index * 300}ms` : '0ms' }"
         >
@@ -76,7 +76,8 @@ import { useIntersectionObserver } from "../composable/useIntersectionObserver";
 
 const showNav = inject("isOpen");
 const toggle = inject("toggle");
-const { targetRef, isVisible } = useIntersectionObserver();
+const targetRef = ref(null);
+const { isVisible } = useIntersectionObserver(targetRef);
 
 const menu = [
   { id: 1, num: "01.", name: "About", href: "#about" },

@@ -1,7 +1,11 @@
 <template>
   <section class="scroll-animation">
     <div class="flex flex-col gap-y-12 items-center overflow-x-hidden">
-      <div class="block space-y-2 items-center text-center font-secondary mb-3">
+      <div
+        class="block space-y-2 items-center text-center font-secondary mb-3"
+        ref="headingRef"
+        :class="headingVisible ? 'text-appear' : 'opacity-0'"
+      >
         <h1 class="text-slate-300 md:text-2xl text-xl">A Few Certificates.</h1>
         <p class="text-font-green md:text-xl text-sm font-medium">
           Proud to share a few certificates from my learning journey.
@@ -63,6 +67,8 @@ import reactBasic from "../assets/image/sertif/react-basic.png";
 import reactInter from "../assets/image/sertif/react-inter.png";
 import webDev from "../assets/image/sertif/webDev.png";
 import udemy from "../assets/image/sertif/udemy.png";
+import { useIntersectionObserver } from "../composable/useIntersectionObserver";
+import { ref } from "vue";
 
 const dataSertif = [
   aws,
@@ -78,4 +84,7 @@ const dataSertif = [
 const mid = Math.ceil(dataSertif.length / 2);
 const firstColumn = dataSertif.slice(0, mid);
 const secondColumn = dataSertif.slice(mid);
+
+const headingRef = ref(null);
+const { isVisible: headingVisible } = useIntersectionObserver(headingRef);
 </script>

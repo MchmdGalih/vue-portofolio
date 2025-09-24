@@ -1,8 +1,11 @@
 import { ref, onMounted, onUnmounted, nextTick } from "vue";
 
-export function useIntersectionObserver(options = { threshold: 0.2 }) {
+export function useIntersectionObserver(
+  targetRef,
+  options = { threshold: 0.3 }
+) {
   const isVisible = ref(false);
-  const targetRef = ref(null);
+
   let observer;
 
   onMounted(async () => {
@@ -10,7 +13,6 @@ export function useIntersectionObserver(options = { threshold: 0.2 }) {
 
     observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        console.log(entry.isIntersecting);
         isVisible.value = entry.isIntersecting;
       });
     }, options);
@@ -22,5 +24,35 @@ export function useIntersectionObserver(options = { threshold: 0.2 }) {
     if (observer && targetRef.value) observer.unobserve(targetRef.value);
   });
 
-  return { targetRef, isVisible };
+  return { isVisible };
+}
+
+export function useMultiObserver(options = { threshold: 0.3 }) {
+  const visibleItems = ref({});
+  let observer;
+
+  onMounted(() => {
+    observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        const id = entry.target.dataset.id;
+
+        console.log(id, entry.isIntersecting);
+
+        visibleItems.value[id] = entry.isIntersecting;
+      });
+    }, options);
+  });
+
+  onUnmounted(() => {
+    if (observer) observer.disconnect();
+  });
+
+  const observe = (el, id) => {
+    if (observer && el) {
+      el.dataset.id = id;
+      observer.observe(el);
+    }
+  };
+
+  return { visibleItems, observe };
 }

@@ -1,7 +1,11 @@
 <template>
   <section id="contact">
     <div class="flex flex-col justify-center items-center">
-      <div class="inline-flex space-x-1.5 items-center font-secondary mb-3">
+      <div
+        class="inline-flex space-x-1.5 items-center font-secondary mb-3"
+        ref="headingRef"
+        :class="headingVisible ? 'text-appear' : 'opacity-0'"
+      >
         <span class="text-font-green md:text-2xl text-xl">04.</span>
         <h1 class="text-slate-300 md:text-2xl text-xl font-medium">
           Reach Out.
@@ -11,7 +15,9 @@
         ></div>
       </div>
       <p
+        ref="titleRef"
         class="max-w-[600px] p-4 text-center text-transparent bg-clip-text bg-gradient-to-l scroll-animation from-slate-100 to-slate-400 font-bold text-xl font-primary"
+        :class="titleVisible ? 'zoom-in' : 'opacity-0'"
       >
         I’m open to exciting new opportunities — especially if you're looking to
         add a passionate and driven developer to your team. Whether it’s a
@@ -33,5 +39,11 @@
 </template>
 
 <script setup>
+import { ref } from "vue";
 import BaseBtn from "./Button/BaseBtn.vue";
+import { useIntersectionObserver } from "../composable/useIntersectionObserver";
+const headingRef = ref(null);
+const titleRef = ref(null);
+const { isVisible: headingVisible } = useIntersectionObserver(headingRef);
+const { isVisible: titleVisible } = useIntersectionObserver(titleRef);
 </script>
