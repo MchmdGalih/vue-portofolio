@@ -44,7 +44,7 @@
         </ul>
 
         <div
-          class="w-full max-h-[400px] overflow-y-auto hide-scrollbar cursor-grab border text-slate-300 border-font-green rounded-md"
+          class="w-full max-h-[400px] overflow-y-auto hide-scrollbar cursor-all-scroll border text-slate-300 border-font-green rounded-md"
         >
           <Transition name="fade" mode="out-in">
             <div :key="activeTab">
@@ -58,13 +58,13 @@
                     {{ exp.title }}
                   </h1>
                   <span
-                    class="md:inline-flex sm:block items-center font-secondary space-x-2 mb-2"
+                    class="md:inline-flex sm:block items-center font-secondary space-x-2"
                   >
                     <p class="text-sm">{{ exp.position }} |</p>
                     <p class="font-light text-xs">{{ exp.date }}</p>
                   </span>
                 </div>
-                <ul class="mt-3 space-y-2 text-md font-secondary py-2 border-b">
+                <ul class="space-y-1 text-md font-secondary py-2 border-b">
                   <li
                     v-for="(item, i) in exp.points"
                     :key="i"
@@ -189,6 +189,27 @@ const tabs = [
     id: "work",
     label: "Works",
     experiences: [
+      {
+        title: "Sajian Cafe",
+        position: "Casual Steward",
+        date: "September 2026 – October 2026",
+        points: [
+          "Maintained kitchen cleanliness and ensured all kitchen equipment and utensils were properly cleaned and organized.",
+          "Assisted with food preparation, including washing, peeling, and cutting ingredients.",
+          "Operated frying equipment to prepare various fried menu items.",
+          "Assisted with grilling and cooking food according to kitchen standards",
+          "Supported kitchen staff in daily food preparation and service operations",
+        ],
+      },
+      {
+        title: "PT Nusantara Express Kilat (formerly SPX)",
+        position: "First Mile Rider - Infal",
+        date: "Febuary 2026 – May 2026",
+        points: [
+          "Responsible for collecting packages from sellers and delivering them to the main hub according to strict schedules and delivery time targets.",
+          "Ensured the safety and security of packages, as well as the accuracy of shipping data throughout the transportation process.",
+        ],
+      },
       {
         title: "PT GAJAH ANGKASA PERKASA (formerly PT. BSSM)",
         position: "Operator",
